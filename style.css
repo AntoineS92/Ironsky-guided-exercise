@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
 
+/* GENERAL FONT AND SIZE */
+
 html,
 body {
     margin: 0;
-    padding: 0;
+    padding: 0;    
+}
+
+body {
     font-family: Roboto;
     size: 10px;
     line-height: 3.5em;
@@ -11,7 +16,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Roboto Condensed;
+    font-family: "Roboto Condensed";
 }
 
 h1 {
@@ -36,14 +41,20 @@ h3 {
 h4 {
     font-size: 1.5em;
     letter-spacing: 0.4px;
+    margin-bottom: 15px;
     line-height: 1em;
 }
 
 h5 {
     font-size: 1.2em;
     line-height: 1em;
-    margin-bottom: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
+
+/* END OF GENERAL FONT AND SIZE */
+
+/* HEADER */
 
 .nav-bar {
     background-color: rgb(25, 33, 41);
@@ -88,9 +99,25 @@ h5 {
     bottom: 100px;
 }
 
+/* END OF HEADER */
+
+/* SECTION 1 */
+
 .dark-background {
     background-color: rgb(25, 33, 41);
     color: white;
+}
+
+#general-information {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#general-information .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 370px;
 }
 
 .text {
@@ -103,11 +130,23 @@ h5 {
 .link-btn {
     background-color: rgb(67, 163, 230);
     color: white;
-    font-family: Roboto Condensed;
+    font-family: "Roboto Condensed";
     font-size: 2em;
     letter-spacing: 0.5px;
     text-align: center;
     text-decoration: none;
+    padding: 10px 30px;
+}
+
+/* END OF SECTION 1 */
+
+/* SECTION 2 */
+
+#structure > div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .service-box {
@@ -125,6 +164,10 @@ h5 {
 .service-box img {
     width: 125px;
 }
+
+/* END OF SECTION 2 */
+
+/* SECTION 3 */
 
 #team {
     padding: 75px 0;
@@ -152,22 +195,57 @@ h5 {
 }
 
 #team hr {
-    margin: 20px auto 30px;
+    margin: 20px auto 30px auto;
     width: 40%;
 }
 
-.footer {
-    text-align: center;
-    font-size: 1.9em;
-    padding: 40px 100px;
-    margin-bottom: 25px;
+#team > div {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.address {
-    font-style: normal;
-    font-size: 0.8em;
-    margin-bottom: 30px;
+#team > div > article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
+/* FORM STYLING */
+
+.slot-form-container {
+    width: 40%;
+    margin: 18px auto 0px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.slot-form-container label {
+    line-height: 15px;
+    margin: 5px;
+}
+
+.slot-form-container input, select {
+    height: 20px;
+    outline: none;
+    padding: 3px;
+    width: 100%;
+}
+
+.slot-form-container button {
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    padding: 9px;
+    margin: top=15px;
+}
+
+
+/* END OF FORM STYLING */
+
+/* END OF SECTION 3 */
+
+/* SECTION 4 */
 
 .schedule-table {
     margin: 0px auto 40px;
@@ -178,6 +256,26 @@ h5 {
     border-bottom: solid 1px black;
     padding: 5px 10px;
     text-align: center;
+}
+
+/* END OF SECTION 4 */
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    font-size: 1.9em;
+    padding: 40px 100px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address {
+    font-style: normal;
+    font-size: 0.8em;
+    margin-bottom: 30px;
 }
 
 .footer a {
@@ -199,3 +297,10 @@ h5 {
     margin: 0px auto;
     padding: 75px 0px;    
 }
+
+.map-frame {
+    height: 375px;
+    width: 60%;
+}
+
+/* END OF FOOTER */
